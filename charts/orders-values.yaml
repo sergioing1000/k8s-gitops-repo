@@ -1,0 +1,13 @@
+image:
+  repository: orders-app
+  tag: v1
+
+container:
+  port: 3010
+
+service:
+  port: 3010
+  targetPort: 3010
+
+ingress:
+  path: /api/orders

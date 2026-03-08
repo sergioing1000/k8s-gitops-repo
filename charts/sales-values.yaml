@@ -1,0 +1,13 @@
+image:
+  repository: sales-app
+  tag: v1
+
+container:
+  port: 3020
+
+service:
+  port: 3020
+  targetPort: 3020
+
+ingress:
+  path: /api/sales

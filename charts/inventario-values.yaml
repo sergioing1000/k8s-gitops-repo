@@ -1,0 +1,13 @@
+image:
+  repository: inventario-app
+  tag: v1
+
+container:
+  port: 3000
+
+service:
+  port: 3000
+  targetPort: 3000
+
+ingress:
+  path: /api/inventario
