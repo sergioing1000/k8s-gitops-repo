@@ -9,10 +9,10 @@ spec:
   source:
     repoURL: https://github.com/sergioing1000/k8s-gitops-repo.git
     targetRevision: HEAD
-    path: apps/sales
+    path: charts/microservice-chart
     helm:
       valueFiles:
-        - values.yaml
+        - ../../apps/sales/values.yaml
 
   destination:
     server: https://kubernetes.default.svc
