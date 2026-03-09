@@ -1,0 +1,23 @@
+app:
+  name: orders
+
+image:
+  repository: orders-app
+  tag: latest
+  pullPolicy: IfNotPresent
+
+replicaCount: 1
+
+service:
+  type: ClusterIP
+  port: 3010
+  targetPort: 3010
+
+container:
+  port: 3010
+
+ingress:
+  enabled: true
+  className: nginx
+  path: /api/orders
+  pathType: Prefix
