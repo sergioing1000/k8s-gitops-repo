@@ -3,7 +3,7 @@ name: CI-CD-Kubernetes
 on:
   push:
     branches:
-      - main      # branch that triggers deployment
+      - master      # branch that triggers deployment
 
 env:
   REGISTRY: docker.io
