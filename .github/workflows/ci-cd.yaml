@@ -30,7 +30,7 @@ jobs:
 
     - name: Build Docker image
       run: |
-        docker build -t $IMAGE_NAME:${{ github.sha }} ./apps/inventario/
+        docker build -t $IMAGE_NAME:${{ github.sha }} ../apps/inventario/
 
     - name: Push Docker image
       run: |
