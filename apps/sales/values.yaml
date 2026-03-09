@@ -1,0 +1,23 @@
+app:
+  name: sales
+
+image:
+  repository: sales-app
+  tag: latest
+  pullPolicy: IfNotPresent
+
+replicaCount: 1
+
+service:
+  type: ClusterIP
+  port: 3020
+  targetPort: 3020
+
+container:
+  port: 3020
+
+ingress:
+  enabled: true
+  className: nginx
+  path: /api/sales
+  pathType: Prefix
