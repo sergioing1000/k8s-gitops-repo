@@ -28,14 +28,6 @@ jobs:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-    - name: Build Docker image
-      run: |
-        docker build -t $IMAGE_NAME:${{ github.sha }} ../apps/inventario/
-
-    - name: Push Docker image
-      run: |
-        docker push $IMAGE_NAME:${{ github.sha }}
-
   deploy:
     needs: build-and-push
     runs-on: ubuntu-latest
