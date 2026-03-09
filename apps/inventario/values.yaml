@@ -1,0 +1,23 @@
+app:
+  name: inventario
+
+image:
+  repository: inventario-app
+  tag: latest
+  pullPolicy: IfNotPresent
+
+replicaCount: 1
+
+service:
+  type: ClusterIP
+  port: 3000
+  targetPort: 3000
+
+container:
+  port: 3000
+
+ingress:
+  enabled: true
+  className: nginx
+  path: /api/inventario
+  pathType: Prefix
